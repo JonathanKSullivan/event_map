@@ -1,0 +1,37 @@
+<html class="no-js" lang="" >
+	{% include 'partials/head.html' %}
+	<body ng-app="EventSite" >
+
+		<div class="flex-container">
+		
+			<div class="row">
+				<div class="col-xs-12">
+					{% include 'partials/header.html' %}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>Admin</h1>
+					 <a href="{{url_for('createEvent')}}">create</a> <br/>
+					{% for event in events%}
+						<a href="{{url_for('readEvent', event_id = event.id)}}">{{event.id}} - {{event.event_type}} - {{event.title}} - {{event.event_time}}  - {{event.address1}} {{event.city}}, {{event.state}} {{event.zipCode}}</a> <a href="{{url_for('updateEvent', event_id = event.id)}}">update</a> <a class="deleteEvent" onclick="deleteEvent({{event.id}})">delete</a><br/>
+					{% endfor %}
+				</div>
+			</div>
+			
+		</div>
+		{% include 'partials/google_analytics.html' %}
+		{% include 'partials/script_loader.html' %}
+		<script type="text/javascript">
+			deleteEvent = function(id) {
+				$.ajax({
+				    url: Flask.url_for('deleteEvent', {event_id : id}),
+				    type: 'DELETE',
+				    success: function(result) {
+				        location.reload();
+				    }
+				});
+			};
+		</script>
+	</body>
+</html>

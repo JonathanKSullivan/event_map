@@ -1,0 +1,22 @@
+<html class="no-js" lang="" >
+	{% include 'partials/head.html' %}
+	<body ng-app="EventSite">
+		<div class="flex-container" ng-controller="homeCtrl">
+			<div class="row">
+				<div class="col-xs-12">
+					{% include 'partials/header.html' %}
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					{% include 'partials/events/form.html' %}
+				</div>
+			</div>
+		</div>
+		{% include 'partials/google_analytics.html' %}
+		{% include 'partials/script_loader.html' %}
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIEAg4Xe9svZ0FJVdrTAN0h02OmsPaRhU&callback=initMap" async defer></script>
+		<script src="{{ url_for('static', filename='script/js/map.js') }}"></script>
+		
+	</body>
+</html>

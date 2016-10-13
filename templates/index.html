@@ -1,0 +1,50 @@
+<html class="no-js" lang="" >
+	{% include 'partials/head.html' %}
+	<body ng-app="EventSite" onload="drawMarkers()">
+
+		<div class="flex-container" ng-controller="homeCtrl">
+		
+			<div class="row">
+				<div class="col-xs-12">
+					{% include 'partials/header.html' %}
+				</div>
+			</div>
+			<div class="row">
+				<div id="home_main" class="col-xs-12">
+					<div id="right_filter" class="hidden-lg hidden-md hidden-sm col-xs-12">
+						{% include 'partials/home/filter.html' %}
+					</div>
+					<div class="col-md-8 col-sm-6 col-xs-12 columns" ng-class="{ 'hidden-xs': mapListView == 'list' }">
+						{% include 'partials/home/map.html' %}
+					</div>
+					<div id="right_filter" class="col-md-4 col-sm-6 hidden-xs">
+						{% include 'partials/home/filter.html' %}
+					</div>
+					<div id="right_list" class="col-md-4 col-sm-6 col-xs-12 pre-scrollable columns" ng-class="{ 'hidden-xs': mapListView == 'map' }">
+						{% include 'partials/home/list.html' %}
+					</div>
+					<div id="right_footer" class="col-md-4 col-sm-6 col-xs-12" ng-class="{ 'hidden-xs': mapListView == 'map' }">
+						{% include 'partials/footer.html' %}
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+		{% include 'partials/google_analytics.html' %}
+		{% include 'partials/script_loader.html' %}
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIEAg4Xe9svZ0FJVdrTAN0h02OmsPaRhU&callback=initMap" async defer></script>
+		<script src="{{ url_for('static', filename='script/js/map.js') }}"></script>
+		
+		<script type="text/javascript">
+		 function drawMarkers(){
+			 {% for event in events%}
+				codeAddress({% include 'partials/params/latlng.html' %}, {% include 'partials/params/info_window.html' %});
+			 {% endfor %}
+		 }
+		
+		</script>
+
+
+	</body>
+</html>

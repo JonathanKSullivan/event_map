@@ -1,0 +1,9 @@
+"<span>{{event.zipCode}}</span>" +
+" | "+
+"<span>{{event.event_time.strftime('%Y-%m-%d')}}</span>" +
+" | "+
+"<span>{{event.event_time.strftime('%I:%M %p')}} </span>" +
+"<br/>" +
+"<a href = '{{url_for('''readEvent''', event_id = event.id)}}'><h1>{{event.event_type}}</h1>" +
+"<h2>{{event.title}}</h2></a>" +
+"<button class='infoWindow_rsvp' style='margin:0px;'>rsvp</button>"

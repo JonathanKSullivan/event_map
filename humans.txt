@@ -1,0 +1,24 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jonathan Sullivan -- Web Developer -- @JonathanSulli13 -- Dallas, Tx
+    Austin Akers -- Web Developer -- @tweetmonster999 -- Dallas, Tx
+    Keddrick Wilson -- Graphic Designer  -- Dallas, Tx
+
+# THANKS
+
+    
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+
+# SITE
+	
+	Last update: 06/082016/
+	Language: English / Español
+	Doctype: HTML5
+	IDE: Sublime Text

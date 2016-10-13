@@ -1,0 +1,13 @@
+<script src="{{ url_for('static', filename='lib/jQuery/jquery-1.11.2.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/angular/angular.min.js') }}"></script>
+<script src="{{ url_for('static', filename='script/app.js') }}"></script>
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea.description' });</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.flashes').remove();
+  }, 5000);
+ })
+</script>

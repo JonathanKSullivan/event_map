@@ -1,0 +1,27 @@
+
+  <nav class="navigation navbar" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{url_for('home')}}">
+          <img id="navigation_branding-image" class="img-responsive" src="{{url_for('static', filename='images/logo/generic-globe-vector-logo.jpg')}}">          
+        </a>
+      </div>
+      <div class="navbar-collapse float_center">
+        <ul class="nav navbar-nav navbar-right child">
+          <li class="navigation_menuItem"><a href=""><img id="share_twitter-image" class="img-responsive" src="{{url_for('static', filename='images/twitter/Twitter_Logo_White_On_Blue.png')}}">
+          <p id="share_twitter-text">Tweet</p></a></li>
+          <li class="navigation_menuItem"><a href=""><img id="share_facebook-image" class="img-responsive" src="{{url_for('static', filename='images/facebook/FB-f-Logo__blue_1024.png')}}">
+          <p id="share_facebook-text">Share</p></a></li>
+          <li class="navigation_menuItem"><a href="{{url_for('createEvent')}}">
+          
+            <img id="host-image" class="img-responsive" src="{{url_for('static', filename='images/add-event.png')}}">
+            <p id="host-text">Host an Event</p></a></li>
+          
+          
+        </ul>
+      </div>
+      <div class="col-xs-12 text-center">
+        <button id="view_button-map" class="navigation_menuItem hidden-sm hidden-md hidden-lg" ng-class="{ 'hidden-xs': mapListView == 'map' }" ng-click="toggleMapListView()">Map View</button>
+        <button id="view_button-list"  class="navigation_menuItem hidden-sm hidden-md hidden-lg" ng-class="{ 'hidden-xs': mapListView == 'list' }" ng-click="toggleMapListView()">List View</button>
+      </div>
+      
+  </nav>

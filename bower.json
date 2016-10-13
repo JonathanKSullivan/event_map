@@ -1,0 +1,17 @@
+{
+  "name": "TechWebsite",
+  "homepage": "https://github.com/BboyAkers/TechWebsite",
+  "authors": [
+    "JonathanKSullivan <jonathan.k.sullivan@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

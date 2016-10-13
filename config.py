@@ -1,0 +1,16 @@
+DEBUG=True,
+TESTING=True,
+SECRET_KEY='3b49861448e2b49bcb8112d75dc76cbfb62900c5d77c9dd5'
+DATABASE_URI = "sqlite:///event.db"
+STORAGE_PROVIDER= "S3_US_WEST_OREGON", # Can also be S3, GOOGLE_STORAGE, etc... 
+STORAGE_KEY = "",
+STORAGE_SECRET = "",
+STORAGE_CONTAINER = "",  # a directory path for local, bucket name of cloud
+STORAGE_ALLOWED_EXTENSIONS = ['svg', 'apng', 'bmp', 'png', 'jpg', 'jpeg', 'gif']
+MAIL_SERVER = 'smtp.gmail.com',
+MAIL_PORT = 587,
+MAIL_USE_TLS = True,
+MAIL_USE_SSL = False,
+MAIL_USERNAME = '',
+MAIL_PASSWORD = '',
+SECURITY_PASSWORD_SALT= 'bqJbw1eJRHZC5hm3'

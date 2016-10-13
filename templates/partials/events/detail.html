@@ -1,0 +1,56 @@
+<div id="eventDetails" class="col-md-12">
+	<div class="col-md-6">
+		<h1 id="eventDetails_event_type">{{event.event_type}}</h1>
+		<h2 id="eventDetails_title">{{event.title}}</h2>
+		<strong>Time: </strong><span>{{event.event_time}}</span><br/>	
+		<strong>Duration: </strong><span>{{event.length}}</span><span>{{event.length_unit}}</span><br/><br/>
+	</div>
+	<div class="col-md-6">
+		<h3>Host</h3>
+		<strong>Name: </strong><span>{{event.host}}</span><br/>
+		<strong>email: </strong><span>{{event.email}}</span><br/>
+		{% if event.public_phone %}
+			<strong>Phone: </strong><span>{{event.phone}}</span><br/>
+		{% endif %}
+	</div>
+	<div class="col-md-12">
+		<h3>Description</h3>
+		{{event.description | safe}}
+	</div>
+	<div class="col-md-6">
+		<h3>Venue</h3><br/>
+		<span>{{event.venue}}</span><br/>
+		<span>{{event.address1}}</span><br/>
+		<span>{{event.address2}}</span><br/>
+		<span>{{event.city}},</span>
+		<span>{{event.state}}</span>
+		<span>{{event.zipCode}}</span>
+		<span>{{event.country}}</span><br/>
+		<strong>Directions: </strong><span>{{event.directions}}</span><br/>
+		<strong>Capacity: </strong><span>{{event.capacity}}</span><br/>
+	</div>
+	
+	<div class="col-md-6">
+		<h3>MetaData</h3>
+		<strong>Creation Date: </strong><span>{{event.creation_date}}</span><br/>
+		<strong>Lattitude: </strong><span>{{event.lat}}</span><br/>
+		<strong>Longitude: </strong><span>{{event.lng}}</span><br/>
+		{% if event.signup_email %}
+			<span>Host will receive an email when you sign up</span><br/>
+		{% else %}
+			<span>Host will not receive an email when you sign up</span><br/>
+		{% endif %}
+
+		{% if event.reminder_email %}
+			<span>You will receive reminder email {{event.reminder_time}} 
+			{% if event.reminder_email ==1 %}
+				hour 
+			{% else %}
+				hours 
+			{% endif %}
+			before this event</span><br/>
+		{% else %}
+			<span>Host will not receive reminder emails</span><br/>
+		{% endif %}
+	</div>
+</div>

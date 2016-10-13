@@ -1,0 +1,39 @@
+<div id="right_filter">
+	<h3 id="filter_title">filter</h3>
+	<form>
+		<div class="row">
+			<div class="col-xs-4">
+				<fieldset>
+					<label>by zipcode</label><br/>
+					<input id="filter_zipCode" type="number" name="zipcode" maxlength="5" placeholder="7xxxx" ng-model="zipCode">
+				</fieldset>	
+			</div>
+			<div class="col-xs-4">
+				<fieldset>
+					<label>distance</label><br/>
+					<select id="filter_distance" name="distance" ng-model="distance">
+		                <option value="5">5mi</option>
+		                <option value="20">20mi</option>
+		                <option value="50" selected="selected">50mi</option>
+		                <option value="100">100mi</option>
+		            </select>
+				</fieldset>	
+			</div>
+			<div class="col-xs-4">
+				<fieldset>
+					<label>sort by</label><br/>
+					<select id="filter_sort" name="sort" ng-model="sort">
+						<option value="time" selected="selected">Time</option>
+						<option value="distance">Distance</option>
+		            </select>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1">
+				<input id="filter_submit" type="submit" value="Search by Event" ng-click="findEvents()">
+			</div>
+		</div>
+	</form>
+</div>
+	
